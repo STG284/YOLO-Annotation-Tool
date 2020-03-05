@@ -7,8 +7,8 @@
 #
 #-------------------------------------------------------------------------------
 from __future__ import division
-from Tkinter import *
-import tkMessageBox
+from tkinter import *
+# import messageBox
 from PIL import Image, ImageTk
 import os
 import glob
@@ -122,6 +122,7 @@ class LabelTool():
     def loadDir(self, dbg = False):
         if not dbg:
             s = self.entry.get()
+            print("the proble:",s)
             self.parent.focus()
             self.category = int(s)
         else:
@@ -135,7 +136,7 @@ class LabelTool():
         print(self.imageDir)
         self.imageList = glob.glob(os.path.join(self.imageDir, '*.jpg'))
         if len(self.imageList) == 0:
-            print 'No .jpg images found in the specified dir!'
+            print('No .jpg images found in the specified dir!')
             return
 
         # default to the 1st image in the collection
@@ -167,7 +168,7 @@ class LabelTool():
             self.egLabels[i].config(image = self.egList[-1], width = SIZE[0], height = SIZE[1])
 
         self.loadImage()
-        print '%d images loaded from %s' %(self.total, s)
+        print('%d images loaded from %s' %(self.total, s))
 
     def loadImage(self):
         # load image
@@ -191,7 +192,7 @@ class LabelTool():
                         bbox_cnt = int(line.strip())
                         continue
                     tmp = [int(t.strip()) for t in line.split()]
-##                    print tmp
+##                    print(tmp)
                     self.bboxList.append(tuple(tmp))
                     tmpId = self.mainPanel.create_rectangle(tmp[0], tmp[1], \
                                                             tmp[2], tmp[3], \
@@ -207,7 +208,7 @@ class LabelTool():
             print(len(self.bboxList))
             for bbox in self.bboxList:
                 f.write(' '.join(map(str, bbox)) + '\n')
-        print 'Image No. %d saved' %(self.cur)
+        print( 'Image No. %d saved' %(self.cur))
 
 
     def mouseClick(self, event):
