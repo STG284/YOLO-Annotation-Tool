@@ -6,6 +6,9 @@
 git clone https://github.com/ManivannanMurugavel/YOLO-Annotation-Tool.git
 
 cd YOLO-Annotation-Tool
+
+pip install -r requirements.txt
+
 ```
 ### Create 001 folder in Images folder and put your class one images
 
@@ -24,4 +27,4 @@ or
 ### Run convert python file for create final text file for yolo images 
 
 ```python convert.py```
-# -------Progress-------
+
