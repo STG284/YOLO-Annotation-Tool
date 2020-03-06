@@ -8,7 +8,6 @@ https://github.com/STG284/YOLO-Annotation-Tool.git
 cd YOLO-Annotation-Tool
 
 pip install -r requirements.txt
-
 ```
 ### Create 001 folder in Images folder and put your class one images
 
@@ -28,3 +27,6 @@ or
 
 ```python convert.py```
 
+
+
+original repo: https://github.com/ManivannanMurugavel/YOLO-Annotation-Tool.git
