@@ -3,7 +3,7 @@
 
 ###### Commands on terminal:
 ```
-git clone https://github.com/ManivannanMurugavel/YOLO-Annotation-Tool.git
+https://github.com/STG284/YOLO-Annotation-Tool.git
 
 cd YOLO-Annotation-Tool
 
